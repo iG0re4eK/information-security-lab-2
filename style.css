@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: rgb(62, 65, 109);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(209, 218, 255);
+}
+
+h1 {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(51, 0, 78);
+}
+
+.input-section {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  textarea {
+    height: 120px;
+    width: 500px;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 1rem;
+    resize: none;
+  }
+
+  button {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: rgb(116, 176, 88);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+  }
+
+  button:hover {
+    background-color: rgb(116, 183, 85);
+  }
+
+  button:active {
+    background-color: rgb(95, 138, 75);
+  }
+}
+
+.result-section {
+  min-height: 70vh;
+  background-color: rgb(203, 208, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  .result-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0;
+    gap: 1rem;
+    width: 90%;
+    border-radius: 1rem;
+    height: auto;
+    padding: 2rem;
+    background-color: rgb(236, 237, 255);
+
+    .iteration {
+      background-color: #ddd5ff;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    table {
+      text-align: center;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-collapse: collapse;
+      border-radius: 1rem;
+      overflow: hidden;
+      color: rgb(51, 0, 78);
+
+      th {
+        padding: 0.5rem;
+      }
+
+      td {
+        padding: 0.5rem;
+      }
+
+      tr:nth-child(even) {
+        background-color: #ddd5ff;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #d6c6fa;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 876px;
+  }
+}
