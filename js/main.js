@@ -276,6 +276,8 @@ encodeBtn.addEventListener("click", () => {
     return binaryArray;
   };
 
+  let finallyResult = "";
+
   const addResultRowModule = (name, value, table) => {
     const row = document.createElement("tr");
     const nameCell = document.createElement("td");
@@ -297,6 +299,7 @@ encodeBtn.addEventListener("click", () => {
     }
 
     const binaryString = xorResult.join(" ");
+    finallyResult = binaryString;
     valueCell.textContent = binaryString;
 
     row.appendChild(nameCell);
@@ -316,8 +319,33 @@ encodeBtn.addEventListener("click", () => {
     [variables.L, shiftFunctionResult],
     tableSumModule
   );
-
   item.appendChild(tableSumModule);
+
+  const addResult = (name, value, table) => {
+    const row = document.createElement("tr");
+    const nameCell = document.createElement("td");
+    nameCell.innerHTML = name;
+
+    const valueCell = document.createElement("td");
+
+    valueCell.textContent = value;
+
+    row.appendChild(nameCell);
+    row.appendChild(valueCell);
+    table.appendChild(row);
+  };
+
+  const tableResult = document.createElement("table");
+  const headerRowResult = document.createElement("tr");
+  const thResult = document.createElement("th");
+  thResult.setAttribute("colspan", "2");
+  thResult.innerHTML = `Результат`;
+  headerRowResult.appendChild(thResult);
+  tableResult.appendChild(headerRowResult);
+
+  addResult("R<sub>1</sub>", finallyResult, tableResult);
+
+  item.appendChild(tableResult);
 
   resultPlace.appendChild(item);
 });
