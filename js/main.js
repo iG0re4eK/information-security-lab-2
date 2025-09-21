@@ -9,16 +9,13 @@ encodeBtn.addEventListener("click", () => {
   const item = document.createElement("div");
   item.classList.add("result-item");
 
-  const variables = {
-    L: inputWord.value.slice(0, 4),
-    R: inputWord.value.slice(4, 8),
-    X: inputWord.value.slice(8, 12),
-  };
+  const inputWordString = inputWord.value.padEnd(12, "о");
 
-  const iteration = document.createElement("span");
-  iteration.classList.add("iteration");
-  iteration.textContent = "1";
-  item.appendChild(iteration);
+  const variables = {
+    L: inputWordString.slice(0, 4),
+    R: inputWordString.slice(4, 8),
+    X: inputWordString.slice(8, 12),
+  };
 
   const tableVariables = document.createElement("table");
   const headerRowVars = document.createElement("tr");
