@@ -41,7 +41,7 @@ h1 {
 
   button {
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     border: none;
     background-color: rgb(116, 176, 88);
     color: white;
@@ -74,7 +74,7 @@ h1 {
     margin: 1rem 0;
     gap: 1rem;
     width: 90%;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     height: auto;
     padding: 2rem;
     background-color: rgb(236, 237, 255);
@@ -94,7 +94,7 @@ h1 {
       width: 100%;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       border-collapse: collapse;
-      border-radius: 1rem;
+      border-radius: 0.5rem;
       overflow: hidden;
       color: rgb(51, 0, 78);
 
